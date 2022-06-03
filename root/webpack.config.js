@@ -1,7 +1,6 @@
 const { merge } = require("webpack-merge");
 const singleSpaDefaults = require("webpack-config-single-spa");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-// const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 
 module.exports = (webpackConfigEnv, argv) => {
   const orgName = "oase";
@@ -24,17 +23,6 @@ module.exports = (webpackConfigEnv, argv) => {
           orgName,
         },
       }),
-      // new ModuleFederationPlugin({
-      //   name: "root",
-      //   filename: "remoteEntry.js",
-      //   exposes: {},
-      //   remotes: {
-      //     demo: "demo",
-      //     another: "another",
-      //     navigation: "navigation"
-      //   },
-      //   shared: []
-      // })
     ],
   });
 };
