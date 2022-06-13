@@ -1,0 +1,9 @@
+{
+    "scripts": {
+        "start": "concurrently --kill-others \"cd another-app && npm start\" \"cd demo-app && npm start\" \"cd navigation-app && npm start\" \"cd root && npm start\"",
+        "install:all": "concurrently --kill-others \"cd another-app && npm install\" \"cd demo-app && npm install\" \"cd navigation-app && npm install\" \"cd root && npm install\""
+    },
+    "devDependencies": {
+        "concurrently": "^7.2.1"
+    }
+}
